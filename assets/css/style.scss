@@ -100,6 +100,16 @@ body {
 }
 
 .btn-mint{
+    background-color:#7EB693;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 300ms all;
+}
+.btn-blue{
     background-color:#274C5B ;
     color: #fff;
     padding: 15px 30px;
@@ -115,9 +125,12 @@ body {
 }
 
 .btn-mint:hover{
+    background-color: #669778;
+    color: #fff;
+}
+.btn-blue:hover{
     background-color: #234552;
     color: #fff;
-
 }
 .btn-gold{
     background-color: #EFD372;
@@ -188,8 +201,8 @@ body {
     border: 1px solid transparent; /* çizgi için default değer */
 
     &-image{
-        width: 100%;
-        height: 325px;
+        width: 200px;
+        height: 200px;
         object-fit: contain;
         padding-top: 40px;
 
@@ -222,7 +235,8 @@ body {
             .span{
                 font-size: 1.2rem;
                 font-weight: 500;
-            }            
+            } 
+                      
         }
         // &-icon{
         //     background-image: url(../img/icon/icon-star.png) url(../img/icon/icon-star-active.png);
@@ -242,4 +256,99 @@ body {
 .category-card:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-color:  #DEDDDD;
+}
+
+.register-card{
+    background-color: #fafafa;
+    border-radius: 5%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+        
+    &-title{
+        color: #444444;
+        display: flex;
+        text-align: center;
+        font-size: 1.2rem;
+        padding-left: 100px;
+    }
+    &-form{
+        padding-left: 10px;
+        .form-control{
+            width: 150px;
+            height: 20px;
+            
+        }
+    }
+}
+
+.register-card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35);
+}
+
+.login-card{
+    background-color: #fafafa;
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    
+    border-radius: 20px;
+    &-image{
+        width: 300px;
+        height: 300px;
+        
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        &-list{
+                padding-left: 20px;
+                .li{
+                    display: block;
+                    background-image: url(../img/icon/search-icon.svg);
+                    background-repeat: no-repeat;
+                    list-style: none;
+                    background-position: left center; 
+                    padding-left: 30px;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                    &::before{
+                        content: "";
+                        background-image: url(../img/icon/blog-icon1.png);
+                        width: 20px;
+                        height: 20px;
+                        display: inline;
+                        margin-right: 5px;
+                        background-size: contain;
+                        background-position: center;
+                    }
+                }
+            } 
+    }
+    &-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;    
+        vertical-align: middle;
+        &-email{
+            position: absolute;
+            width: 100%;
+            max-width: 400px; 
+            height: 100px;      
+        }
+        &-google{
+            position: absolute;
+            width: 100%;
+            max-width: 400px;
+            height: 100px;
+        }
+    }
 }
